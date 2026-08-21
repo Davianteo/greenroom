@@ -1,0 +1,230 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Greenroom — Blueprint Session Runsheet</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></head><body>
+<style>
+:root{
+  --bg:#EFE9DC; --surface:#F6F2E8; --line:#D8D0BE; --ink:#0E0E0E; --smoke:#6B645A; --red:#C84A1F;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter Tight","Inter",-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root{--bg:#0E0E0E;--surface:#191813;--line:#2E2B22;--ink:#EFE9DC;--smoke:#9A9284;--red:#D95B2E}}
+:root[data-theme="dark"]{--bg:#0E0E0E;--surface:#191813;--line:#2E2B22;--ink:#EFE9DC;--smoke:#9A9284;--red:#D95B2E}
+:root[data-theme="light"]{--bg:#EFE9DC;--surface:#F6F2E8;--line:#D8D0BE;--ink:#0E0E0E;--smoke:#6B645A;--red:#C84A1F}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);margin:0;line-height:1.55;font-size:16px}
+.wrap{max-width:740px;margin:0 auto;padding:56px 24px 80px}
+.mark{font-family:var(--serif);letter-spacing:-0.04em;display:inline-flex;align-items:baseline;font-size:22px}
+.mark .we{font-style:italic;font-weight:300}
+.mark .found{font-weight:500}
+.mark .dot{width:.12em;height:.12em;border-radius:50%;background:var(--red);margin:0 .05em;transform:translateY(-.18em);display:inline-block}
+.eyebrow{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--smoke)}
+h1{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1.12;letter-spacing:-0.025em;margin:14px 0 8px;text-wrap:balance}
+h1 em{font-style:italic;font-weight:400}
+h2{font-family:var(--serif);font-weight:400;font-size:26px;letter-spacing:-0.02em;margin:0 0 4px}
+.sub{color:var(--smoke);max-width:58ch;margin:0 0 0}
+.meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px}
+.meta span{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--smoke)}
+.meta b{color:var(--ink);font-weight:500}
+.bar{display:flex;gap:3px;margin:40px 0 6px}
+.bar div{height:34px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);background:var(--surface);color:var(--smoke);white-space:nowrap;overflow:hidden}
+.bar .hot{background:var(--red);border-color:var(--red);color:#EFE9DC}
+.barlbl{display:flex;gap:3px;margin-bottom:8px}
+.barlbl span{font-family:var(--mono);font-size:10px;color:var(--smoke);letter-spacing:.06em}
+section{margin-top:56px;border-top:1px solid var(--line);padding-top:28px}
+.acthead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.time{font-family:var(--mono);font-size:12px;color:var(--red);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.goal{color:var(--smoke);margin:6px 0 24px;max-width:60ch}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:18px 20px;margin:14px 0}
+.q .ask{font-family:var(--serif);font-style:italic;font-weight:400;font-size:19px;line-height:1.45;margin:0}
+.q .ask::before{content:"“";color:var(--red)}
+.q .ask::after{content:"”";color:var(--red)}
+.probe{margin:10px 0 0;color:var(--smoke);font-size:15px}
+.probe b{color:var(--ink);font-weight:500}
+.cap{margin-top:14px;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--smoke)}
+.cap b{color:var(--red);font-weight:500}
+.note{border-left:2px solid var(--red);padding:4px 0 4px 18px;margin:26px 0;font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5}
+.list{padding-left:0;list-style:none;margin:0}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline}
+.list li:last-child{border-bottom:0}
+.list .n{font-family:var(--mono);font-size:11px;color:var(--red);min-width:20px}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--smoke);text-align:left;font-weight:500;padding:8px 12px 8px 0;border-bottom:1px solid var(--ink)}
+td{padding:10px 12px 10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:500}
+.script{background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:20px 22px;margin:16px 0;font-family:var(--serif);font-size:17px;line-height:1.6}
+.script p{margin:0 0 12px}
+.script p:last-child{margin:0}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--smoke);border:1px solid var(--line);padding:3px 8px;border-radius:2px;margin:0 6px 6px 0}
+.foot{margin-top:64px;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.foot span{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.16em;color:var(--smoke)}
+@media (max-width:560px){h1{font-size:32px}.bar div{font-size:0}.bar div.hot{font-size:10px}}
+</style>
+
+<div class="wrap">
+<span class="mark"><span class="we">we</span><span class="dot"></span><span class="found">found</span></span>
+<p class="eyebrow" style="margin-top:34px">Greenroom · Touchpoint 1 of 7</p>
+<h1>The Blueprint Session <em>runsheet</em></h1>
+<p class="sub">The first consult. Ninety minutes, three acts. Everything the member says here becomes their Brand Blueprint, their 12 scripts, and every script after that. You ask, they talk, you write.</p>
+<div class="meta">
+  <span>Duration <b>90 min</b></span>
+  <span>Output <b>Brand Blueprint</b></span>
+  <span>Delivered <b>In app, 72h</b></span>
+  <span>Record <b>Airtable · Members</b></span>
+</div>
+
+<div class="bar">
+  <div style="flex:5">5</div>
+  <div class="hot" style="flex:30">Act 1 · 30</div>
+  <div class="hot" style="flex:25">Act 2 · 25</div>
+  <div class="hot" style="flex:20">Act 3 · 20</div>
+  <div style="flex:10">10</div>
+</div>
+<div class="barlbl"><span style="flex:5"></span><span style="flex:30">Story &amp; identity</span><span style="flex:25">Problem, people, product</span><span style="flex:20">Content pillars</span><span style="flex:10">Wrap</span></div>
+
+<section>
+<p class="eyebrow">Before the call</p>
+<h2>Prep — 15 minutes, not on the clock</h2>
+<ul class="list">
+<li><span class="n">01</span><span>Read their intake form. Open their Instagram and the 3 posts they submitted. Watch them properly.</span></li>
+<li><span class="n">02</span><span>Write down two observations about their content — one genuine strength, one gap. You'll use both in the opening.</span></li>
+<li><span class="n">03</span><span>Open their member record in Airtable, side by side with this runsheet. You type into the Blueprint fields live.</span></li>
+<li><span class="n">04</span><span>Check the frustration line from their form. It's your bridge into Act 2 — don't waste it early.</span></li>
+</ul>
+</section>
+
+<section>
+<div class="acthead"><h2>The opening frame</h2><span class="time">5 min</span></div>
+<p class="goal">Set the contract for the session. Say it nearly word for word — the frame is what makes them go deep instead of polite.</p>
+<div class="script">
+<p>"First — welcome in. Before we start, here's what this session actually is, because it's not a briefing call.</p>
+<p>This is where we extract the raw material for everything Greenroom makes for you. Your scripts, your pillars, your voice — all of it comes from the next ninety minutes. So my job is to ask, your job is to talk, and I'll be writing the whole time. Nothing you say here disappears — if it's good, it becomes content.</p>
+<p>By the end we'll have your Brand Blueprint mapped. Within three days it's in your app. Within the week, your first twelve scripts land — written in your voice, from what you tell me today. Ready?"</p>
+</div>
+<p class="probe"><b>Then:</b> one sentence of proof you did the prep — "I went through your grid; the [specific post] works, and I think I know what's missing." Now they know this is bespoke.</p>
+</section>
+
+<section>
+<div class="acthead"><h2>Act 1 — Find your story &amp; identity</h2><span class="time">30 min</span></div>
+<p class="goal">Extract the Attractive Character: origin, transformation, polarity, voice. Push past summaries — you want scenes and verbatim phrases. If they give you a LinkedIn answer, ask for the day it happened.</p>
+
+<div class="q">
+<p class="ask">What were you doing before this — and what was the moment you decided to build it?</p>
+<p class="probe"><b>Push:</b> "Take me to the actual day. Where were you? What happened right before?"</p>
+<p class="cap">Capture → <b>Origin Story</b> · a scene, in their words</p>
+</div>
+
+<div class="q">
+<p class="ask">What was the lowest point — the moment this almost didn't work? And what changed?</p>
+<p class="probe"><b>Push:</b> "What did you know after that you didn't know before?" That sentence is the transformation.</p>
+<p class="cap">Capture → <b>Origin Story</b> · struggle → turn</p>
+</div>
+
+<div class="q">
+<p class="ask">What does your industry do that genuinely annoys you?</p>
+<p class="probe"><b>Push:</b> "What do you believe that most of your competitors would disagree with?" Keep going until you have <b>3–5 belief statements</b>. These are the hooks with teeth — don't settle for two.</p>
+<p class="cap">Capture → <b>Belief Statements</b> · one per line, their phrasing</p>
+</div>
+
+<div class="q">
+<p class="ask">If your brand spoke — three words it is. Three words it never is.</p>
+<p class="probe"><b>Push:</b> "Never is more useful than is. What would make you cringe if we wrote it?"</p>
+<p class="cap">Capture → <b>Voice Words — Is</b> / <b>Voice Words — Never</b></p>
+</div>
+
+<div class="q">
+<p class="ask">Let's write your line: I help — who — get — what — through — what.</p>
+<p class="probe"><b>Method:</b> draft it out loud together. Say it back to them. Refine until they say "yes, that's it." Don't leave Act 1 without it.</p>
+<p class="cap">Capture → <b>Identity Line</b></p>
+</div>
+
+<p class="note">Listen for the sentence they say with heat. Write it down exactly as spoken — that phrasing is a hook, and polishing it kills it.</p>
+</section>
+
+<section>
+<div class="acthead"><h2>Act 2 — Problem, people, product</h2><span class="time">25 min</span></div>
+<p class="goal">The PPP pass. You're collecting the customer's language, the exact audience, the proof, and the objections. Bridge in with the frustration line from their intake form.</p>
+
+<p class="eyebrow" style="margin-bottom:6px">Problem</p>
+<div class="q">
+<p class="ask">When a customer first messages you, what do they actually say? Read me a real one.</p>
+<p class="probe"><b>Push:</b> "What's the 11pm thought that finally makes someone look for you?"</p>
+<p class="cap">Capture → <b>Pain Statements</b> · customer's words, not the category's</p>
+</div>
+
+<p class="eyebrow" style="margin:22px 0 6px">People</p>
+<div class="q">
+<p class="ask">Describe your best customer — the one you wish you had a hundred of.</p>
+<p class="probe"><b>Push:</b> "What do they believe about [their category] that your worst customer doesn't?"</p>
+<p class="cap">Capture → <b>Avatar</b> · person + worldview</p>
+</div>
+<div class="q">
+<p class="ask">And who is this not for?</p>
+<p class="probe"><b>Why:</b> the not-for sharpens every script. Get at least one honest exclusion.</p>
+<p class="cap">Capture → <b>Not For</b></p>
+</div>
+
+<p class="eyebrow" style="margin:22px 0 6px">Product</p>
+<div class="q">
+<p class="ask">Walk me through the offer — what do they buy, what does it cost, what happens after they pay?</p>
+<p class="cap">Capture → confirm <b>What You Sell</b> from intake, enrich</p>
+</div>
+<div class="q">
+<p class="ask">What proof do you have that it works — numbers, results, befores and afters, testimonials?</p>
+<p class="probe"><b>Push:</b> "Which result are you proudest of? Tell me that story in thirty seconds." That's a testimonial script.</p>
+<p class="cap">Capture → <b>Proof Inventory</b></p>
+</div>
+<div class="q">
+<p class="ask">What are the top three hesitations you hear before someone buys?</p>
+<p class="probe"><b>Why:</b> these feed the Answers pillar and the ManyChat prompts. Get the phrasing, not the paraphrase.</p>
+<p class="cap">Capture → <b>Top Objections</b> · one per line</p>
+</div>
+</section>
+
+<section>
+<div class="acthead"><h2>Act 3 — Content pillars</h2><span class="time">20 min</span></div>
+<p class="goal">Name their 4–5 pillars in their language, draft hooks live, set the ratio. You're not inventing here — everything comes from Acts 1 and 2. Frame it: "Everything you just told me sorts into four or five buckets. Here they are."</p>
+
+<table>
+<tr><th>Pillar</th><th>Job</th><th>Sourced from</th><th>Script format</th></tr>
+<tr><td>Belief</td><td>Argue their hot takes</td><td>Act 1 · beliefs</td><td>Myth Buster</td></tr>
+<tr><td>Story</td><td>Founder as the brand</td><td>Act 1 · origin</td><td>Narrative</td></tr>
+<tr><td>Proof</td><td>Results do the selling</td><td>Act 2 · proof</td><td>Testimonial</td></tr>
+<tr><td>Answers</td><td>Kill pains &amp; objections</td><td>Act 2 · pains</td><td>One Tip Daily</td></tr>
+<tr><td>Offer</td><td>The direct ask</td><td>Act 2 · product</td><td>Caption video</td></tr>
+</table>
+
+<ul class="list">
+<li><span class="n">01</span><span>Rename each pillar in their words — "Belief" might become "Real Talk" for them. Their name, their ownership.</span></li>
+<li><span class="n">02</span><span>Draft 2–3 hooks per pillar live, straight from the belief statements and pain lines you just captured. Say them out loud — if they lean in, it's a keeper.</span></li>
+<li><span class="n">03</span><span>Cut a thin pillar honestly. No proof yet? Drop Proof for now, lean Story harder.</span></li>
+<li><span class="n">04</span><span>Set the monthly ratio, roughly 4:1 give-to-ask — e.g. 3 : 3 : 2 : 3 : 1 across the twelve scripts.</span></li>
+</ul>
+<p class="cap" style="margin-top:16px">Capture → <b>Content Pillars</b> · names + jobs + hooks &nbsp;&nbsp; <b>Pillar Ratio</b></p>
+</section>
+
+<section>
+<div class="acthead"><h2>The wrap</h2><span class="time">10 min</span></div>
+<p class="goal">Recap what you captured, set the delivery expectations, and book touchpoint 2 before you hang up.</p>
+<div class="script">
+<p>"Here's what we just built: your line — [read it]. Your beliefs — [read the sharpest one]. Your pillars — [name them]. That's your Blueprint.</p>
+<p>What happens next: it's in your app within three days. Your twelve scripts land within the week — three per pillar mix, in your voice. Then we meet for Script Sharing: sixty minutes, we walk through all twelve together. After that, the shoot and edit run-through, in person. Then it's four weeks of shooting — three videos a week, and we review them together every week.</p>
+<p>By day thirty you'll have twelve videos live. Let's lock the script session now — how's [date]?"</p>
+</div>
+</section>
+
+<section>
+<p class="eyebrow">After the call</p>
+<h2>Post-call — same day, 45 minutes</h2>
+<ul class="list">
+<li><span class="n">01</span><span>Clean up the Blueprint fields while it's fresh — verbatim quotes preserved, one thought per line.</span></li>
+<li><span class="n">02</span><span>Member Status → Consult Done. Create the six remaining Touchpoint records with target dates.</span></li>
+<li><span class="n">03</span><span>Compile the one-page Brand Blueprint and push to their app section within 72 hours.</span></li>
+<li><span class="n">04</span><span>Generate the twelve scripts from the record against the pillar ratio. Review, then deliver within week one.</span></li>
+</ul>
+<p class="note">The operating rule: nothing said on the call stays verbal. If it isn't written into a field, it can't feed a script.</p>
+</section>
+
+<div class="foot">
+<span>Greenroom · Blueprint Session</span>
+<span>A WeFound Composition</span>
+</div>
+</div>
+</body></html>
